@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+class Student {
+    int roll,PRN;
+    string name;
+   float total;
+  public:
+  Student(int r,int p,string n,float t){
+      roll=r;name=n;PRN=p;total=t;
+  }
+  void result(){
+      cout << "Percentage:-"<< (total/5)<<"%"<<endl;
+  }
+};
+
+int main(){
+   Student s(1,252141165,"omkar",400);
+   s.result();
+    return 0;
+}
