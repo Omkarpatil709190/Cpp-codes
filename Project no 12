@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+class Book {
+   string name_of_Book;
+   string name_of_auther;
+   float price;
+   int ISBN;
+  public:
+  Book(string n,string a,float p,int i){
+      name_of_Book=n;name_of_auther=a,price=p;ISBN=i;
+  }
+  Book (Book &b){
+      name_of_Book=b.name_of_Book;name_of_auther=b.name_of_auther,price=b.price;ISBN=b.ISBN;
+  }
+  void display(){
+      cout <<name_of_Book <<", "<<name_of_auther<<", "<<price<<", "<<ISBN<<endl;
+  }
+};
+int main(){
+   Book b1("Harry potter","Ron",5000,34589);
+   Book b2(b1);
+   b1.display();
+   b2.display();
+    return 0;
+}
